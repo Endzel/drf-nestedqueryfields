@@ -17,7 +17,7 @@ setup(
     version="1.0.0",
     description="Serialize API fields on demand to various levels of depth",
     long_description=long_description,
-    packages=["drf-nestedqueryfields"],
+    packages=["drf_nestedqueryfields"],
     author="Ángel Jiménez",
     author_email="angeljimenezgong@gmail.com",
     license="MIT",

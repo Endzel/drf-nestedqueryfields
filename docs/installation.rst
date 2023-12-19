@@ -3,4 +3,4 @@ Installation
 
 .. code-block:: bash
 
-    pip install drf-nestedqueryfields
+    pip install drf_nestedqueryfields

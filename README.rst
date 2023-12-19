@@ -1,7 +1,7 @@
 Django REST Framework Nested QueryFields 🪜
 =================================
 
-|gh|_ |codecov|_ |pypi|_ |womm|_
+|gh|_ |codecov|_ |womm|_
 
 .. |gh| image:: https://github.com/Endzel/drf-nestedqueryfields/actions/workflows/main.yml/badge.svg
 .. _gh: https://github.com/Endzel/drf-nestedqueryfields/actions
@@ -49,7 +49,7 @@ Fields are specified in the query and separated by points determining a given de
     }
 
     
-    # And, you just want filter "username" and which "city" for the specific "location" attribute user endzel:
+    # And, you just want to filter "username" and "city" for the "location" attribute within the user endzel:
     
     GET /users/2/?fields=username,location.city
     
@@ -86,4 +86,4 @@ Want to contribute to the project? This is how to run the test suite:
    pytest
 
 
-Many thanks to `Wim Glenn <https://github.com/wimglenn>`, author of the original `DRF QueryFields repository <https://github.com/wimglenn/djangorestframework-queryfields>` from which this one was forked that inspired me to add my two cents!
+Many thanks to `Wim Glenn <https://github.com/wimglenn>`_, author of the original `DRF QueryFields repository <https://github.com/wimglenn/djangorestframework-queryfields>`_ from which this one was forked that inspired me to add my two cents!
