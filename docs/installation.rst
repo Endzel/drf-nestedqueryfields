@@ -3,4 +3,4 @@ Installation
 
 .. code-block:: bash
 
-    pip install djangorestframework-queryfields
+    pip install drf-nestedqueryfields

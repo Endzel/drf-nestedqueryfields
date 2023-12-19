@@ -6,9 +6,9 @@ Specify your base model serializer like this:
 .. code-block:: python
 
     from rest_framework.serializers import ModelSerializer
-    from drf_queryfields import QueryFieldsMixin
+    from drf_nestedqueryfields import NestedQueryFieldsMixin
 
-    class MyModelSerializer(QueryFieldsMixin, ModelSerializer):
+    class MyModelSerializer(NestedQueryFieldsMixin, ModelSerializer):
         pass
 
 

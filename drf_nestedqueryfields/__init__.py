@@ -1,0 +1,1 @@
+from drf_nestedqueryfields.mixins import NestedQueryFieldsMixin

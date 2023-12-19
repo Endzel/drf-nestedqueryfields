@@ -1,25 +1,22 @@
 from rest_framework import serializers
 
-from drf_queryfields import QueryFieldsMixin
+from drf_nestedqueryfields import NestedQueryFieldsMixin
 from tests.app.fields import BoomField
 from tests.app.models import Snippet
 
 
-class QuoteSerializer(QueryFieldsMixin, serializers.Serializer):
-
+class QuoteSerializer(NestedQueryFieldsMixin, serializers.Serializer):
     character = serializers.CharField()
     line = serializers.CharField()
     sketch = serializers.CharField()
 
 
-class SnippetSerializer(QueryFieldsMixin, serializers.ModelSerializer):
-
+class SnippetSerializer(NestedQueryFieldsMixin, serializers.ModelSerializer):
     class Meta:
         model = Snippet
         exclude = ()
 
 
-class ExplosiveSerializer(QueryFieldsMixin, serializers.Serializer):
-
+class ExplosiveSerializer(NestedQueryFieldsMixin, serializers.Serializer):
     safe = serializers.CharField()
     boom = BoomField()

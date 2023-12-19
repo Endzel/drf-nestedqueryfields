@@ -18,7 +18,7 @@ A:
 
 .. code-block:: python
 
-    class MyModelSerializer(QueryFieldsMixin, ModelSerializer):
+    class MyModelSerializer(NestedQueryFieldsMixin, ModelSerializer):
 
         include_arg_name = 'include'
         exclude_arg_name = 'exclude'
@@ -27,7 +27,7 @@ A:
 
 Now request like ``GET /things/?exclude=key2|key3`` instead of the default ``GET /things/?fields!=key2,key3``.
 
-*New in v1.1.0*: The Django settings module may also be used, for example:
+The Django settings module may also be used, for example:
 
 .. code-block:: python
 
@@ -35,9 +35,3 @@ Now request like ``GET /things/?exclude=key2|key3`` instead of the default ``GET
     DRF_QUERYFIELDS_INCLUDE_ARG_NAME = 'gimme'
     DRF_QUERYFIELDS_EXCLUDE_ARG_NAME = 'omit'
     DRF_QUERYFIELDS_DELIMITER = '+'
-
-
-Q:
-  This thing broke, you suck... / Hey, wouldn't it be cool if...
-A:
-  Well, that's not really a question, pal.  For feature requests or bug reports, please `create an issue here <https://github.com/wimglenn/djangorestframework-queryfields/issues>`_.

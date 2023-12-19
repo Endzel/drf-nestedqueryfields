@@ -1,7 +1,8 @@
-Django REST framework QueryFields documentation
+Django REST Framework NestedQueryFields documentation
 ===============================================
 
-Allows clients to control which fields will be sent in the API response.  The idea is based on a recipe described in the official documentation, `Dynamically modifying fields <http://www.django-rest-framework.org/api-guide/serializers/#dynamically-modifying-fields>`_, adapted to allow API users to specify fields via GET request query parameters.  
+Allows clients to control which fields will be sent in the API response. 
+The idea is based on a recipe described in the official documentation, `Dynamically modifying fields <http://www.django-rest-framework.org/api-guide/serializers/#dynamically-modifying-fields>`_, adapted to allow API users to specify fields via GET request query parameters.  
 
 Doing the filtering server-side instead of client-side can have advantages:
 
