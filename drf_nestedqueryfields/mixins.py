@@ -6,7 +6,7 @@ class NestedQueryFieldsMixin(object):
     include_arg_name = "fields"
     exclude_arg_name = "fields!"
 
-    # Split field names by this string.  It doesn't necessarily have to be a single character.
+    # Split field names by this string. It doesn't necessarily have to be a single character.
     # Avoid RFC 1738 reserved characters i.e. ';', '/', '?', ':', '@', '=' and '&'
     delimiter = ","
 
@@ -14,17 +14,17 @@ class NestedQueryFieldsMixin(object):
         super(NestedQueryFieldsMixin, self).__init__(*args, **kwargs)
         self.include_arg_name = getattr(
             settings,
-            "DRF_QUERYFIELDS_INCLUDE_ARG_NAME",
+            "DRF_NESTEDQUERYFIELDS_INCLUDE_ARG_NAME",
             self.include_arg_name,
         )
         self.exclude_arg_name = getattr(
             settings,
-            "DRF_QUERYFIELDS_EXCLUDE_ARG_NAME",
+            "DRF_NESTEDQUERYFIELDS_EXCLUDE_ARG_NAME",
             self.exclude_arg_name,
         )
         self.delimiter = getattr(
             settings,
-            "DRF_QUERYFIELDS_DELIMITER",
+            "DRF_NESTEDQUERYFIELDS_DELIMITER",
             self.delimiter,
         )
 

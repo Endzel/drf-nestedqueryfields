@@ -8,7 +8,7 @@ from tests.app.models import Snippet
 class QuoteSerializer(NestedQueryFieldsMixin, serializers.Serializer):
     character = serializers.CharField()
     line = serializers.CharField()
-    sketch = serializers.CharField()
+    episode = serializers.CharField()
 
 
 class SnippetSerializer(NestedQueryFieldsMixin, serializers.ModelSerializer):

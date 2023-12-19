@@ -9,22 +9,38 @@ from tests.app.models import Snippet
 
 def get_quote_list():
     """canned data for a list-view response"""
-    quote1 = Quote(character='Customer', line="It's certainly uncontaminated by cheese", sketch='CHEESE SHOP')
-    quote2 = Quote(character='The Black Knight', line="It's just a flesh wound", sketch='HOLY GRAIL')
+    quote1 = Quote(
+        character="Michael Scott",
+        line="I… Declare…. Bankruptcy!",
+        episode="3x10",
+    )
+    quote2 = Quote(
+        character="Dwight Schrute",
+        line="Always the Padawan, never the Jedi.",
+        episode="5x04",
+    )
     return [quote1, quote2]
 
 
 def get_quote_object(pk=None):
     """canned data far a detail-view response"""
-    if pk != 'parrot':
+    if pk != "parrot":
         raise Http404
-    q = Quote(character='Shopkeeper', line="Well, he's...he's, ah...probably pining for the fjords", sketch='PET SHOP')
+    q = Quote(
+        character="Stanley Hudson",
+        line="Did I stutter?",
+        episode="4x07",
+    )
     return q
 
 
 def get_snippet_queryset():
-    s1 = Snippet(id=1, title='Fork bomb', code=':(){ :|: & };:', language='bash')
-    s2 = Snippet(id=2, title='French flag', code="print((u'\x1b[3%s;1m\u2588'*78+u'\n')%((4,)*26+(7,)*26+(1,)*26)*30)")
+    s1 = Snippet(id=1, title="Fork bomb", code=":(){ :|: & };:", language="bash")
+    s2 = Snippet(
+        id=2,
+        title="French flag",
+        code="print((u'\x1b[3%s;1m\u2588'*78+u'\n')%((4,)*26+(7,)*26+(1,)*26)*30)",
+    )
     snippets_qs = QuerySetMock(Snippet, s1, s2)
     return snippets_qs
 
@@ -33,17 +49,17 @@ def get_snippet_model_instance(pk=None):
     if int(pk) != 3:
         raise Http404
     code = '[ $[ $RANDOM % 6 ] == 0 ] && rm -rf / || echo "click"'
-    snippet = Snippet(id=3, title='Russian roulette', code=code, language='bash')
+    snippet = Snippet(id=3, title="Russian roulette", code=code, language="bash")
     return snippet
 
 
 def get_explosive_list():
-    bomb1 = Explosive(safe='green wire', boom='red wire')
-    bomb2 = Explosive(safe='helium', boom='hydrogen')
+    bomb1 = Explosive(safe="green wire", boom="red wire")
+    bomb2 = Explosive(safe="helium", boom="hydrogen")
     return [bomb1, bomb2]
 
 
 def get_explosive_object(pk=None):
-    if pk != 'bunger':
+    if pk != "bunger":
         raise Http404
-    return Explosive(safe='tom thumb', boom='poha')
+    return Explosive(safe="tom thumb", boom="poha")
