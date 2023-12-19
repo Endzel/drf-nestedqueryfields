@@ -6,7 +6,7 @@ Django REST Framework Nested QueryFields 🪜
 .. |gh| image:: https://github.com/Endzel/drf-nestedqueryfields/actions/workflows/main.yml/badge.svg
 .. _gh: https://github.com/Endzel/drf-nestedqueryfields/actions
 
-.. |codecov| image:: https://codecov.io/gh/Endzel/drf-nestedqueryfields/branch/main/graph/badge.svg?token=Y8OCVJX7MF
+.. |codecov| image:: https://codecov.io/gh/Endzel/drf-nestedqueryfields/graph/badge.svg?token=Y8OCVJX7MF
 .. _codecov: https://codecov.io/gh/Endzel/drf-nestedqueryfields
 
 .. |womm| image:: https://cdn.rawgit.com/nikku/works-on-my-machine/v0.2.0/badge.svg
@@ -75,7 +75,7 @@ Want to contribute to the project? This is how to run the test suite:
    git clone https://github.com/Endzel/drf-nestedqueryfields.git
 
    # Create and activate your virtual environment
-   python3 -m venv .venv
+   python -m venv .venv
    source .venv/bin/activate
 
    # Install the app
@@ -83,7 +83,7 @@ Want to contribute to the project? This is how to run the test suite:
    git checkout -b myfeature
 
    # Do your thing, and then fire the tests with
-   pytest
+   python -m pytest
 
 
 Many thanks to `Wim Glenn <https://github.com/wimglenn>`_, author of the original `DRF QueryFields repository <https://github.com/wimglenn/djangorestframework-queryfields>`_ from which this one was forked that inspired me to add my two cents!
