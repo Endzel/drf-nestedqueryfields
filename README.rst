@@ -6,7 +6,7 @@ Django REST Framework Nested QueryFields 🪜
 .. |gh| image:: https://github.com/Endzel/drf-nestedqueryfields/actions/workflows/main.yml/badge.svg
 .. _gh: https://github.com/Endzel/drf-nestedqueryfields/actions
 
-.. |codecov| image:: https://codecov.io/gh/Endzel/drf-nestedqueryfields/branch/main/graph/badge.svg?token=WeqbZ83YRg
+.. |codecov| image:: https://codecov.io/gh/Endzel/drf-nestedqueryfields/branch/main/graph/badge.svg?token=Y8OCVJX7MF
 .. _codecov: https://codecov.io/gh/Endzel/drf-nestedqueryfields
 
 .. |womm| image:: https://cdn.rawgit.com/nikku/works-on-my-machine/v0.2.0/badge.svg
