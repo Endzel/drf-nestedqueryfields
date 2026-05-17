@@ -1,7 +1,7 @@
 Django REST Framework Nested QueryFields 🪜
 =================================
 
-|gh| |codecov| |pypi| |womm|
+|gh| |codecov| |womm|
 
 .. |gh| image:: https://github.com/Endzel/drf-nestedqueryfields/actions/workflows/main.yml/badge.svg
 .. _gh: https://github.com/Endzel/drf-nestedqueryfields/actions
