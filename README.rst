@@ -60,7 +60,7 @@ Fields are specified in the query and separated by points determining a given de
         }
     }
 
-**Supported Django versions**: 3.2 - 5.0+.  Check the `CI matrix <https://github.com/Endzel/drf-nestedqueryfields/blob/main/.github/workflows/main.yml/>`_ for details.
+**Supported Django versions**: 4.2 - 6.0+.  Check the `CI matrix <https://github.com/Endzel/drf-nestedqueryfields/blob/main/.github/workflows/main.yml/>`_ for details.
 
 Documentation is hosted on `Read The Docs <http://drf-nestedqueryfields.readthedocs.io/>`_.
 
@@ -86,4 +86,4 @@ Want to contribute to the project? This is how to run the test suite:
    python -m pytest
 
 
-Many thanks to `Wim Glenn <https://github.com/wimglenn>`_, author of the original `DRF QueryFields repository <https://github.com/wimglenn/djangorestframework-queryfields>`_ from which this one was forked that inspired me to add my two cents!
+Many thanks to `Wim Glenn <https://github.com/wimglenn>`_, author of the original `DRF QueryFields repository <https://github.com/wimglenn/djangorestframework-queryfields>`_ from which this one was forked, that inspired me to add my two cents!

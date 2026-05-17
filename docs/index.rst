@@ -20,4 +20,5 @@ Contents
    installation
    quickstart
    usage
+   deepnesting
    faq
