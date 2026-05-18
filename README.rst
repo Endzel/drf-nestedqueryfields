@@ -1,5 +1,5 @@
 Django REST Framework Nested QueryFields 🪜
-=================================
+===========================================
 
 |gh| |codecov| |womm|
 
