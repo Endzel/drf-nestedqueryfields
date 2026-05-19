@@ -9,28 +9,44 @@ on:
 
 jobs:
   tests:
-    name: Python ${{ matrix.python-version }}
+    name: Python ${{ matrix.python-version }} / Django ${{ matrix.django-version || 'latest' }} / DRF ${{ matrix.drf-version || 'latest' }}
     runs-on: ubuntu-latest
 
     strategy:
+      fail-fast: false
       matrix:
-        python-version:
-        - "3.11"
-        - "3.12"
-        - "3.13"
-        - "3.14"
+        python-version: ["3.11", "3.12", "3.13", "3.14"]
+        django-version: ["4.2", "5.2", ""]
+        drf-version: [""]
+        exclude:
+          # Django 4.2 LTS supports Python 3.8-3.12
+          - { python-version: "3.13", django-version: "4.2" }
+          - { python-version: "3.14", django-version: "4.2" }
+          # Django 5.2 LTS supports Python 3.10-3.13
+          - { python-version: "3.14", django-version: "5.2" }
+        include:
+          # Floor check: declared minimums for Django + DRF together
+          - { python-version: "3.11", django-version: "4.2", drf-version: "3.14" }
+          - { python-version: "3.12", django-version: "4.2", drf-version: "3.15" }
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-python@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
-        run: pip install .[dev]
+        run: |
+          pip install .[dev]
+          if [ -n "${{ matrix.django-version }}" ]; then
+            pip install "Django==${{ matrix.django-version }}.*"
+          fi
+          if [ -n "${{ matrix.drf-version }}" ]; then
+            pip install "djangorestframework==${{ matrix.drf-version }}.*"
+          fi
 
-      - name: Run tests for ${{ matrix.python-version }}
+      - name: Run tests
         run: python -m pytest --cov=drf_nestedqueryfields
 
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@e79a6962e0d4c0c17b229090214935d2e33f8354
         with:
           token: ${{ secrets.CODECOV_TOKEN }}

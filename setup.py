@@ -24,7 +24,7 @@ with open("README.rst") as f:
 
 setup(
     name="drf-nestedqueryfields",
-    version="1.0.0",
+    version="1.0.1",
     description="Serialize API fields on demand to various levels of depth",
     long_description=long_description,
     long_description_content_type="text/x-rst",
@@ -33,7 +33,17 @@ setup(
     author_email="angeljimenezgong@gmail.com",
     license="MIT",
     url="https://github.com/Endzel/drf-nestedqueryfields",
+    project_urls={
+        "Documentation": "https://drf-nestedqueryfields.readthedocs.io/",
+        "Source": "https://github.com/Endzel/drf-nestedqueryfields",
+        "Issues": "https://github.com/Endzel/drf-nestedqueryfields/issues",
+        "Changelog": "https://github.com/Endzel/drf-nestedqueryfields/blob/main/CHANGELOG.md",
+    },
     python_requires=">=3.11",
+    install_requires=[
+        "Django>=4.2",
+        "djangorestframework>=3.14",
+    ],
     classifiers=classifiers,
     extras_require={
         "dev": [
